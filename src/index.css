@@ -84,9 +84,3 @@ html[lang="hi"] .font-display {
   display: none;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track,
-  .live-dot::after {
-    animation: none;
-  }
-}

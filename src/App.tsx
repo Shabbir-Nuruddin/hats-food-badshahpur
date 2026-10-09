@@ -1,5 +1,4 @@
 import { Fragment, useEffect, useState, type ReactNode } from "react";
-import { useReducedMotion } from "motion/react";
 import { WhatsappLogo } from "@phosphor-icons/react";
 import { SITE } from "./content";
 import { UI, bi, openState, type Lang, type SectionKey } from "./lib";
@@ -22,7 +21,7 @@ function useNow() {
 export default function App() {
   const [lang, setLang] = useState<Lang>("en");
   const t = UI[lang];
-  const reduced = (useReducedMotion() ?? false) && !new URLSearchParams(location.search).has("motion");
+  const reduced = new URLSearchParams(location.search).has("still");
   const now = useNow();
   const state = openState(SITE.hours, now);
 
@@ -46,7 +45,7 @@ export default function App() {
     <div className="relative">
       <header className="fixed inset-x-0 top-0 z-40">
         <p className="bg-accent px-4 py-1.5 text-center text-[13px] font-medium text-on-accent">{bi(SITE.banner, lang)}</p>
-        <div className="border-b border-line bg-bg/85 backdrop-blur-md">
+        <div className="border-b border-line bg-bg">
           <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-4 px-4 py-3 sm:px-8">
             <a href="#top" className="min-w-0 leading-none">
               <span className="block truncate font-display text-[24px] leading-none text-ink">{SITE.name}</span>
@@ -98,7 +97,7 @@ export default function App() {
         <WhatsappLogo size={28} weight="fill" />
       </a>
 
-      <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-[1.4fr_1fr] gap-2 border-t border-line bg-bg/90 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-md md:hidden">
+      <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-[1.4fr_1fr] gap-2 border-t border-line bg-bg p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] md:hidden">
         <CallButton label={t.callShort} className="whitespace-nowrap !px-4 !py-3" />
         <a href={waLink(wa)} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-wa py-3 text-[16px] font-semibold text-[#062a14] active:scale-[0.98]">
           <WhatsappLogo size={20} weight="fill" />
