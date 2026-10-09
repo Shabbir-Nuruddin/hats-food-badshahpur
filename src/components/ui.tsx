@@ -12,7 +12,7 @@ const PILL = "inline-flex items-center justify-center gap-2.5 rounded-full px-6 
 
 export function CallButton({ label, className = "" }: { label: string; className?: string }) {
   return (
-    <a href={TEL} className={`${PILL} bg-accent text-on-accent shadow-[0_12px_32px_-14px_var(--accent)] hover:-translate-y-0.5 ${className}`}>
+    <a href={TEL} className={`${PILL} bg-accent text-on-accent hover:-translate-y-0.5 ${className}`}>
       <Phone size={19} weight="fill" />
       {label}
     </a>

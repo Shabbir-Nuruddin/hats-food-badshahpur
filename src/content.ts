@@ -38,6 +38,7 @@ export const SITE: Site = {
       hi: "गूगल पर 133 रिव्यू से 4.9। रसीले मोमोज़, तंदूरी चाप और चाइनीज़, बादशाहपुर सोहना रोड पर सोना मार्बल्स के पीछे।",
     },
     fallback: "/img/p2.jpg",
+    slides: ["/img/p1.jpg", "/img/p4.jpg", "/img/p6.jpg", "/img/p9.jpg"],
   },
   marquee: ["Paneer Momos", "Chicken Momos", "Tandoori Chaap", "Chilli Paneer", "Hakka Noodles", "Manchurian", "Fried Rice"],
   dishes: {

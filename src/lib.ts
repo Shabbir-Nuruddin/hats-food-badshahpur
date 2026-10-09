@@ -39,7 +39,7 @@ export type Site = {
   theme: Theme;
   scene: SceneKey;
   align: "left" | "right";
-  hero: { title: [Bi, Bi]; proof: Bi; fallback: string; /** Full-bleed restaurant photo behind a photoreal scene. */ backdrop?: string };
+  hero: { title: [Bi, Bi]; proof: Bi; fallback: string; /** Full-bleed restaurant photo behind a photoreal scene. */ backdrop?: string; /** Real photos the hero crossfades through. */ slides?: string[] };
   marquee: string[];
   dishes: { title: Bi; body: Bi; layout: "list" | "cards"; items: Dish[] };
   gallery: { title: Bi; layout: "strip" | "mosaic"; photos: Photo[] };
