@@ -199,9 +199,9 @@ export function Build({ lang, reduced, index }: { lang: Lang; reduced: boolean; 
                 href={waLink(msg)}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-6 flex w-full items-center justify-center gap-2.5 rounded-full bg-wa py-4 text-[17px] font-semibold text-[#062a14] transition hover:-translate-y-0.5 active:scale-[0.98]"
+                className="mt-6 flex w-full items-center justify-center gap-2.5 rounded-full bg-ink py-4 text-[17px] font-semibold text-bg outline-none transition-colors duration-300 hover:bg-accent focus-visible:bg-accent active:scale-[0.98]"
               >
-                <WhatsappLogo size={22} weight="fill" />
+                <WhatsappLogo size={22} weight="fill" className="text-wa" />
                 {t.send}
               </a>
             </div>
